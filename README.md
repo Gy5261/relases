@@ -1,13 +1,19 @@
 # PRUEBA-ALFA-ORION-MINI
 
-Distribución pública de **Orion Mini para Windows x64**.
+**Orion Mini** — versión alfa para Windows x64.
 
-[Descargar el instalador de la última versión](https://github.com/Gy5261/relases/releases/latest).
+## Descargar y abrir
 
-Este repositorio contiene exclusivamente documentación de distribución y archivos `.exe` publicados mediante GitHub Releases. El código fuente y el flujo de compilación permanecen en el repositorio privado `Gy5261/Orion-Mini`.
+Consulta las [versiones disponibles](https://github.com/Gy5261/relases/releases). Cuando se publique una versión, descarga el archivo `Orion-Mini-X.Y.Z.exe` y ejecútalo con doble clic. **No necesita un asistente de instalación (setup).** La primera ejecución prepara los componentes necesarios y abre Orion Mini automáticamente.
 
-Después de la instalación inicial, Orion Mini comprueba automáticamente nuevas versiones al iniciar y cada 15 minutos. Descarga el instalador, verifica su manifiesto firmado y SHA-256, instala en una carpeta nueva y vuelve a abrir el navegador. Las versiones son inmutables y cada publicación identifica el commit privado que la produjo.
+La descarga estará disponible cuando se publique la primera versión. El navegador requiere componentes de Windows compatibles con WebView2; si faltan, pueden necesitarse pasos adicionales para habilitarlos.
 
-El perfil de usuario se conserva en `%LOCALAPPDATA%\CloneSafari`. Si la nueva versión no confirma un inicio correcto, el instalador intenta volver a la anterior. La instalación no requiere permisos de administrador y se realiza en `%LOCALAPPDATA%\OrionMini`.
+## Actualizaciones
 
-**Versión alfa de pruebas.** Windows puede mostrar una advertencia inicial porque el instalador no tiene certificado Authenticode comercial. Las actualizaciones automáticas verifican una firma RSA independiente con la clave pública incluida en el navegador; no ejecutan instaladores sin verificar.
+Las versiones publicadas se verifican mediante firma criptográfica y SHA-256 antes de aplicarse. Orion Mini comprueba la disponibilidad de actualizaciones al abrir y periódicamente durante su uso, conservando los datos de navegación. Si una versión no inicia correctamente, el actualizador intenta recuperar la anterior.
+
+## Privacidad y código
+
+Este repositorio público se dedica **solo a distribuir ejecutables y notas de versión**. No contiene código fuente privado, credenciales, rutas de equipos, ubicaciones de usuarios ni información de diagnósticos personales.
+
+**Estado: prueba alfa.** Hasta que aparezca un ejecutable en GitHub Releases, no hay una descarga disponible. Windows puede mostrar una advertencia de editor desconocido si el ejecutable aún no cuenta con certificado Authenticode de un proveedor reconocido.
