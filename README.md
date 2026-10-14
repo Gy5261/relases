@@ -15,7 +15,7 @@ El canal portátil comprueba versiones al abrir y periódicamente. Verifica el m
 **La primera adopción desde la versión 1.3.0 requiere descargar manualmente este nuevo portátil.** Las versiones antiguas no incluyen este canal. Los datos de navegación no forman parte del EXE ni son sustituidos por el actualizador.
 
 
-La versión 1.3.3 añade protección contextual inicial de publicidad, analítica y grabación, informes opcionales, píxeles sociales, redes mixtas y destinos web de telemetría. Incorpora la lista de privacidad de uAssets y corrige variantes DNS/IDN/puertos. Las excepciones y el escudo por sitio se conservan; no se garantiza bloquear todo rastreo de primera parte, WebSockets ni tráfico fuera del navegador.
+La versión 1.3.3 consolida doce fuentes oficiales mediante deduplicación canónica y un índice único por hostname. Integra Unbreak para entradas hosts, contramedidas Anti-AdBlock locales y acotadas, preservación de SRI y bloqueo de popups publicitarios automáticos. Conserva la protección contextual de privacidad, las excepciones y el escudo por sitio. El filtrado opera dentro de WebView2; no se garantiza bloqueo universal, DNS del sistema, CNAME desconocidos, SSAI ni neutralización de todos los desafíos Anti-AdBlock.
 
 ## Privacidad y distribución
 
