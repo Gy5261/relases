@@ -4,7 +4,7 @@
 
 ## Descargar y abrir
 
-Descarga [Orion Mini 1.3.8 portátil](https://github.com/Gy5261/relases/releases/download/v1.3.8/Orion-Mini-Portable-1.3.8.exe) desde [GitHub Releases](https://github.com/Gy5261/relases/releases/latest) y abre el EXE. Incluye el runtime WebView2; no necesita un instalador ni una descarga independiente del motor. La primera apertura extrae y verifica sus componentes en una caché local. Requiere Windows x64 compatible con WebView2 y .NET Framework 4.8, incluido en Windows 11.
+Descarga [Orion Mini 1.3.9 portátil](https://github.com/Gy5261/relases/releases/download/v1.3.9/Orion-Mini-Portable-1.3.9.exe) desde [GitHub Releases](https://github.com/Gy5261/relases/releases/latest) y abre el EXE. Incluye el runtime WebView2; no necesita un instalador ni una descarga independiente del motor. La primera apertura extrae y verifica sus componentes en una caché local. Requiere Windows x64 compatible con WebView2 y .NET Framework 4.8, incluido en Windows 11.
 
 El archivo es grande porque contiene el motor completo. La caché y los datos de navegación ocupan espacio adicional. El inicio y las pestañas nuevas abren Google.
 
@@ -14,6 +14,10 @@ El canal portátil comprueba versiones al abrir y periódicamente. Verifica el m
 
 **La primera adopción desde la versión 1.3.0 requiere descargar manualmente este nuevo portátil.** Las versiones antiguas no incluyen este canal. Los datos de navegación no forman parte del EXE ni son sustituidos por el actualizador.
 
+
+La versión 1.3.9 incorpora un panel nativo Gemini con clave propia de [Google AI Studio](https://aistudio.google.com/apikey). El botón de la barra permite compartir la pestaña, revisar localmente el texto y activar una captura visible opcional. Cada pregunta actualiza el contexto; navegar, cambiar de pestaña o cerrar el panel revoca el acceso y borra el historial local. La clave se guarda opcionalmente protegida con DPAPI, fuera del EXE y de las páginas. No utiliza sesiones de Chrome ni ejecuta acciones del modelo.
+
+Se probaron en WebView2 real la extracción aislada, imagen JPEG, exclusión de campos editables, permisos, revocación, vista previa y actualización del DOM. Las solicitudes HTTP locales verifican formato, cabeceras, errores, redirecciones y cancelación. La inferencia de Gemini no está verificada porque el usuario no dispone todavía de una clave; las fixtures del parser no se presentan como respuestas generadas. La imagen puede incluir información privada visible: revocar no elimina datos ya enviados a Google.
 
 La versión 1.3.8 integra el icono de Orion en el EXE portátil, el núcleo nativo, el actualizador y la ventana, con nueve resoluciones de 16 a 256 píxeles. El acceso directo conserva la identidad estable del portátil. Las actualizaciones funcionan sin controles visibles: mientras el navegador está abierto consulta nuevas versiones al iniciar y cada 15 minutos, con conexión a Internet, y aplica la versión verificada al cerrar.
 
