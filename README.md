@@ -4,7 +4,7 @@
 
 ## Descargar y abrir
 
-Descarga [Orion Mini 1.3.7 portátil](https://github.com/Gy5261/relases/releases/download/v1.3.7/Orion-Mini-Portable-1.3.7.exe) desde [GitHub Releases](https://github.com/Gy5261/relases/releases/latest) y abre el EXE. Incluye el runtime WebView2; no necesita un instalador ni una descarga independiente del motor. La primera apertura extrae y verifica sus componentes en una caché local. Requiere Windows x64 compatible con WebView2 y .NET Framework 4.8, incluido en Windows 11.
+Descarga [Orion Mini 1.3.8 portátil](https://github.com/Gy5261/relases/releases/download/v1.3.8/Orion-Mini-Portable-1.3.8.exe) desde [GitHub Releases](https://github.com/Gy5261/relases/releases/latest) y abre el EXE. Incluye el runtime WebView2; no necesita un instalador ni una descarga independiente del motor. La primera apertura extrae y verifica sus componentes en una caché local. Requiere Windows x64 compatible con WebView2 y .NET Framework 4.8, incluido en Windows 11.
 
 El archivo es grande porque contiene el motor completo. La caché y los datos de navegación ocupan espacio adicional. El inicio y las pestañas nuevas abren Google.
 
@@ -14,6 +14,8 @@ El canal portátil comprueba versiones al abrir y periódicamente. Verifica el m
 
 **La primera adopción desde la versión 1.3.0 requiere descargar manualmente este nuevo portátil.** Las versiones antiguas no incluyen este canal. Los datos de navegación no forman parte del EXE ni son sustituidos por el actualizador.
 
+
+La versión 1.3.8 integra el icono de Orion en el EXE portátil, el núcleo nativo, el actualizador y la ventana, con nueve resoluciones de 16 a 256 píxeles. El acceso directo conserva la identidad estable del portátil. Las actualizaciones funcionan sin controles visibles: mientras el navegador está abierto consulta nuevas versiones al iniciar y cada 15 minutos, con conexión a Internet, y aplica la versión verificada al cerrar.
 
 La versión 1.3.7 elimina las pausas de protocolo en solicitudes permitidas, adapta la frecuencia de captura del cristal, sincroniza los menús con el reloj del motor y reduce el objetivo de memoria de pestañas ocultas sin suspender scripts. La comprobación de arranque usa un perfil aislado. Se verificaron iframes publicitarios de YouTube directos y anidados, navegación principal y reproducción pública; esa sesión no sirvió un anuncio que permita certificar su eliminación.
 
