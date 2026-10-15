@@ -4,7 +4,7 @@
 
 ## Descargar y abrir
 
-Descarga [Orion Mini 1.3.14 portátil](https://github.com/Gy5261/relases/releases/download/v1.3.14/Orion-Mini-Portable-1.3.14.exe) desde [GitHub Releases](https://github.com/Gy5261/relases/releases/latest) y abre el EXE. Incluye el runtime WebView2; no necesita un instalador ni una descarga independiente del motor. La primera apertura extrae y verifica sus componentes en una caché local. Requiere Windows x64 compatible con WebView2 y .NET Framework 4.8, incluido en Windows 11.
+Descarga [Orion Mini 1.3.15 portátil](https://github.com/Gy5261/relases/releases/download/v1.3.15/Orion-Mini-Portable-1.3.15.exe) desde [GitHub Releases](https://github.com/Gy5261/relases/releases/latest) y abre el EXE. Incluye el runtime WebView2; no necesita un instalador ni una descarga independiente del motor. La primera apertura extrae y verifica sus componentes en una caché local. Requiere Windows x64 compatible con WebView2 y .NET Framework 4.8, incluido en Windows 11.
 
 El archivo es grande porque contiene el motor completo. La caché y los datos de navegación ocupan espacio adicional. El inicio y las pestañas nuevas abren Google.
 
@@ -14,6 +14,8 @@ El canal portátil comprueba versiones al abrir y periódicamente. Verifica el m
 
 **La primera adopción desde la versión 1.3.0 requiere descargar manualmente este nuevo portátil.** Las versiones antiguas no incluyen este canal. Los datos de navegación no forman parte del EXE ni son sustituidos por el actualizador.
 
+
+La versión 1.3.15 añade detección local de contratos publicitarios en dominios ausentes de las listas: VAST/VMAP, subastas con múltiples señales e impresiones explícitas. Las predicciones por pestaña se limitan al mismo origen, endpoint y tipo de recurso; caducan a los 120 segundos y se borran al navegar o cambiar la protección. Respeta excepciones, autenticación, reproducción y confianza por sitio. La prueba nativa utiliza un dominio aleatorio, cinco recursos bloqueados y cinco controles originales. En 30.000 decisiones sintéticas, el p99 del clasificador fue de 0,0141 ms; no mide carga de páginas ni garantiza latencia máxima. No deduce infaliblemente la finalidad de cualquier script o API desconocida ni elimina SSAI.
 
 La versión 1.3.14 retira el asistente de IA y refuerza el bloqueo de vídeo: filtra sobres agrupados y listas JSON de YouTube; las solicitudes publicitarias ya bloqueadas con formato VAST/VMAP explícito reciben una respuesta estándar sin anuncios ni pausas publicitarias programadas. Se conservan las excepciones, el escudo por sitio, las pistas de vídeo y los subtítulos. La suite incluye 12 sustituciones nativas por fetch/XHR con credenciales, antes/durante/después de un vídeo generado localmente. Estas pruebas no demuestran bloqueo universal ni eliminación de anuncios SSAI integrados en la señal de vídeo.
 
