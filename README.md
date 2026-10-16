@@ -4,11 +4,13 @@
 
 ## Descargar y abrir
 
-Descarga [Orion Mini 1.3.15 portátil](https://github.com/Gy5261/relases/releases/download/v1.3.15/Orion-Mini-Portable-1.3.15.exe) desde [GitHub Releases](https://github.com/Gy5261/relases/releases/latest) y abre el EXE. Incluye el runtime WebView2; no necesita un instalador ni una descarga independiente del motor. La primera apertura extrae y verifica sus componentes en una caché local. Requiere Windows x64 compatible con WebView2 y .NET Framework 4.8, incluido en Windows 11.
+Descarga [Orion Mini 1.3.17 portátil](https://github.com/Gy5261/relases/releases/download/v1.3.17/Orion-Mini-Portable-1.3.17.exe) desde [GitHub Releases](https://github.com/Gy5261/relases/releases/latest) y abre el EXE. Incluye el runtime WebView2; no necesita un instalador ni una descarga independiente del motor. La primera apertura extrae y verifica sus componentes en una caché local. Requiere Windows x64 compatible con WebView2 y .NET Framework 4.8, incluido en Windows 11.
 
 El archivo es grande porque contiene el motor completo. La caché y los datos de navegación ocupan espacio adicional. El inicio y las pestañas nuevas abren Google.
 
 ## Actualizaciones
+
+La versión 1.3.17 corrige cuatro debilidades: exenciones heurísticas activables mediante parámetros/rutas, listas cosméticas globales o de solo exclusiones que podían ocultar la página, omisión del filtro YouTube en hosts con punto DNS final y vaciado global de predicciones al alcanzar 128 entradas. Conserva autenticación, excepciones, reproducción y control por sitio. Las regresiones incluyen 256 variantes de parámetros y pruebas reales de WebView2 con 13 recursos bloqueados, ocho variantes de evasión y siete controles originales. No garantiza ausencia universal de vulnerabilidades o evasiones; no clasifica arbitrariamente cualquier script ni elimina SSAI. El p99 sintético fue de 0,0098 ms en 30.000 decisiones; no mide carga de páginas ni establece un máximo garantizado.
 
 El canal portátil comprueba versiones al abrir y periódicamente. Verifica el manifiesto firmado mediante RSA/SHA-256, el tamaño y hash del EXE y el arranque real de WebView2 antes de preparar una actualización. La aplica al cerrar el navegador. Conserva un respaldo temporal hasta confirmar el siguiente arranque; si ese arranque termina sin confirmación, intenta recuperar la versión anterior. La actualización pública de 1.3.6 a 1.3.7 pasó la descarga con el actualizador anterior, validación criptográfica, arranque real, recuperación exacta, reactivación y confirmación.
 
